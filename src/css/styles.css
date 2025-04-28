@@ -1,12 +1,75 @@
+/* hero to footer is in a container (navbar is not) */
+.container {
+  max-width: 1400px;
+  margin: 0 auto; /* center */
+}
+
+body {
+  background: rgba(157, 130, 229, 0.6);
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+    url("../images/dog-training-hopkinton-ma-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; /* fill screen */
+  color: white;
+  text-align: center;
+  padding: 200px 0;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 1;
+  margin: 30px 0;
+}
+
+header h2 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+header h3 {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+header a {
+  font-weight: 700;
+  font-size: 14px;
+  color: #5b42c2;
+  padding: 16px 32px; /* 16 top and bottom, 32 sides */
+  margin-top: 32px;
+  display: inline-block; /* margin won't work on inline items, so make inline-block */
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: white;
+  text-decoration: none;
+}
+
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html {
+  scroll-padding-top: 100px;
 }
 
 h1,
 h2,
 h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
+  scroll-margin-top: 100px;
 }
 
 /* Navbar styles */
@@ -64,7 +127,23 @@ h3 {
 }
 
 /* RESPONSIVE styles for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  header {
+    padding: 60px 0;
+  }
+
+  header h1 {
+    font-size: 48px;
+  }
+
+  header h2 {
+    font-size: 20px;
+  }
+
+  header h3 {
+    font-size: 12px;
+  }
+
   .navbar {
     flex-direction: column; /* stack logo and menu vertically if needed */
     align-items: center;
