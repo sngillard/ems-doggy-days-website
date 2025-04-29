@@ -38,3 +38,17 @@ scrollToTopBtn.addEventListener("click", function () {
     behavior: "smooth",
   });
 });
+
+document.querySelector("form").addEventListener("submit", function (e) {
+  e.preventDefault(); // prevent actual submission
+
+  // Optional: validate or collect data here if needed
+
+  // Show success message
+  const message = document.getElementById("form-message");
+  message.textContent = "Thank you! We’ll be in touch soon.";
+  message.style.display = "block";
+
+  // Optionally clear the form
+  this.reset();
+});
