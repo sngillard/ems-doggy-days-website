@@ -1,4 +1,5 @@
 /* hero to footer is in a container (navbar is not) */
+/* SHARED STYLES */
 .container {
   max-width: 1400px;
   margin: 0 auto; /* center */
@@ -6,6 +7,7 @@
 
 section {
   scroll-margin-top: 100px;
+  padding: 60px 20px;
 }
 
 body {
@@ -75,7 +77,16 @@ h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-/* Navbar styles */
+.signature {
+  font-family: "Brush Script MT", cursive, "Segoe Script", "Lucida Handwriting",
+    "Comic Sans MS", cursive;
+  font-style: italic;
+  font-size: 28px;
+  margin-top: 20px;
+  color: #5b42c2;
+}
+
+/* NAVBAR STYLES */
 .navbar {
   display: flex;
   align-items: center;
@@ -120,15 +131,129 @@ h3 {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-.signature {
-  font-family: "Brush Script MT", cursive, "Segoe Script", "Lucida Handwriting",
-    "Comic Sans MS", cursive;
-  font-style: italic;
-  font-size: 28px;
-  margin-top: 20px;
-  color: #5b42c2;
+/* ABOUT US STYLES */
+#about {
+  background-color: white;
+  color: black;
 }
 
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* SERVICES STYLES */
+#services {
+  background-color: rgba(157, 130, 229, 0.15); /* light purple */
+  color: black;
+}
+
+#services ul {
+  list-style: disc inside;
+  margin-bottom: 20px;
+}
+
+/* MEET EMILY STYLES */
+#meet-emily {
+  background-color: white;
+  color: black;
+}
+
+.meet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.meet-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* INSTAGRAM */
+#instagram {
+  background-color: rgba(157, 130, 229, 0.07); /* soft lavender */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* CONTACT STYLES */
+#contact {
+  background-color: white;
+  color: black;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input,
+form textarea,
+form button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #5b42c2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #47329b;
+}
+
+/* MAP EMBED */
+.map-container {
+  width: 100%;
+  height: 300px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* FOOTER STYLES */
 footer {
   color: white;
   background: linear-gradient(
@@ -226,6 +351,7 @@ footer {
 }
 
 /* RESPONSIVE styles for smaller screens */
+/* @MEDIA- SHARED STYLES */
 @media (max-width: 900px) {
   header {
     padding: 60px 0;
@@ -246,6 +372,12 @@ footer {
   header h3 {
     font-size: 12px;
   }
+
+  .signature {
+    font-size: 21px;
+  }
+
+  /* @MEDIA- NAVBAR STYLES */
 
   .navbar {
     flex-direction: column; /* stack logo and menu vertically if needed */
@@ -269,9 +401,18 @@ footer {
     width: auto;
   }
 
-  .signature {
-    font-size: 21px;
+  /* @MEDIA- BODY SECTIONS */
+  .about-grid,
+  .meet-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
+
+  .map-container {
+    height: 250px;
+  }
+
+  /* @MEDIA- FOOTER STYLES */
 
   .footer-grid {
     grid-template-columns: 1fr;
