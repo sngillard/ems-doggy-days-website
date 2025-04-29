@@ -4,17 +4,9 @@
   margin: 0 auto; /* center */
 }
 
-/*
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
+section {
+  scroll-margin-top: 100px;
 }
-
- section {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-  */
 
 body {
   background: rgba(157, 130, 229, 0.6);
@@ -81,7 +73,6 @@ h1,
 h2,
 h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
-  scroll-margin-top: 100px;
 }
 
 /* Navbar styles */
@@ -238,6 +229,10 @@ footer {
 @media (max-width: 900px) {
   header {
     padding: 60px 0;
+  }
+
+  section {
+    scroll-margin-top: 140px;
   }
 
   header h1 {
