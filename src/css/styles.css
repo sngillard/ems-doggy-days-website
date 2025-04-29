@@ -131,6 +131,19 @@ h3 {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
+/* FADE-IN ANIMATION */
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When section is visible */
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ABOUT US STYLES */
 #about {
   background-color: white;
@@ -179,9 +192,57 @@ h3 {
 }
 
 .meet-grid img {
+  max-width: 400px;
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+
+/* ABOUT AND MEET PHOTO AND TEXT GRID STYLES */
+/* Normal layout (desktop) */
+.about-grid,
+.meet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+}
+
+.about-img {
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Images */
+.meet-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+/* Text */
+.about-text,
+.meet-text {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.meet-text {
+  text-align: center;
 }
 
 /* INSTAGRAM */
@@ -410,6 +471,40 @@ footer {
 
   .map-container {
     height: 250px;
+  }
+
+  /* @MEDIA- ABOUT AND MEET PHOTO AND TEXT GRID STYLES */
+  .about-grid {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about-img {
+    max-width: 300px; /* smaller image on mobile */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .meet-grid img {
+    max-width: 250px;
+  }
+
+  .meet-grid {
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    text-align: center;
+  }
+
+  .about-text,
+  .meet-text {
+    text-align: left;
+  }
+
+  /* TRICK: Flip order for About Us (show text first) */
+  .about-grid {
+    flex-direction: column-reverse; /* put text BEFORE image */
   }
 
   /* @MEDIA- FOOTER STYLES */
