@@ -8,13 +8,16 @@
     <!-- tells search engines what the page is about (150-160 char)-->
     <meta
       name="description"
-      content="Professional dog training services in Hopkinton, MA. Helping dogs build obedience, confidence, and a lifetime of good behavior."
+      content="Expert dog training in Hopkinton, MA—build obedience and confidence in your dog. Contact Em's Doggy Days to schedule a session today!"
     />
+
+    <!-- ensures search engines know they should index your site and follow links (usually done by default but this ensures)-->
+    <meta name="robots" content="index, follow" />
 
     <!-- controls what preview shows when page is shared on social media-->
     <meta
       property="og:title"
-      content="Dog Training in Hopkinton, MA | Em's Doggy Days"
+      content="Hopkinton MA Dog Training | Em's Doggy Days"
     />
 
     <!-- controls description text when site is shared on social media-->
@@ -33,11 +36,17 @@
     />
     -->
 
+    <!-- keywords for SEO aka what people might search on Google keep under 15-20 targeted phrases-->
+    <meta
+      name="keywords"
+      content="dog training hopkinton ma, dog trainer hopkinton ma, hopkinton dog trainer, hopkinton crate training dogs, hopkinton puppy training classes, hopkinton scent training dogs, dog training ashland ma, ashland ma puppy training classes, ashland ma crate training dogs, personal protection dog training near me, scent work training for dogs near me, dog training near me, obedience training for dogs near me, dog socialization training near me, dog behavior training near me "
+    />
+
     <!-- tells social media what image to show when your page is shared -->
-    <!-- <meta
+    <meta
       property="og:image"
-      content="https://dog-training-hopkinton-ma.netlify.app/src/images/ems-doggy-days-logo.png"
-    />  -->
+      content="https://emsdoggydays.com/src/images/dog-training-logo-hopkinton-ashland.png"
+    />
 
     <!-- adds a favicon that shows up in browser tag next to page title (favicon.ico is little image (usually tiny version or logo)-->
     <link
@@ -57,6 +66,28 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- JSON-LD (tructured data for search engines to read) **NEED TO ADD FINAL LOGO AND URL PATHS** -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "DogTrainer",
+        "name": "Em's Doggy Days",
+        "image": "https://emsdoggydays.com/src/images/dog-training-logo-hopkinton-ashland.png",
+        "description": "Personalized, professional dog training in Hopkinton, MA. Serving Ashland, Holliston, Milford, and surrounding towns.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "11 Chamberlain St",
+          "addressLocality": "Hopkinton",
+          "addressRegion": "MA",
+          "postalCode": "01748",
+          "addressCountry": "US"
+        },
+        "telephone": "+1-617-645-8318",
+        "email": "emsdoggydays@gmail.com",
+        "url": "https://emsdoggydays.com"
+      }
+    </script>
   </head>
 
   <body>
@@ -64,8 +95,8 @@
     <nav class="navbar">
       <a href="#home" class="logo">
         <img
-          src="src/images/logo-original.PNG"
-          alt="Em’s Doggy Days Logo"
+          src="src/images/dog-training-logo-hopkinton-ashland.png"
+          alt="Dog training logo for Hopkinton and Ashland MA – Em’s Doggy Days"
           width="250"
           height="150"
         />
@@ -82,45 +113,56 @@
     <!-- Hero section -->
     <div class="container">
       <header id="home" class="hero">
-  <h3>Em's Doggy Days</h3>
-  <h1>Professional Dog Training in Hopkinton, MA</h1>
-  <h2>
-    Where every day is a <em>good doggy day</em>—<br>
-    personalized training at our fully fenced facility for happier, more confident dogs.
-  </h2>
-        <a href="#contact" class="cta-button">Get Started Today</a>
+        <h3>Em's Doggy Days</h3>
+        <h1>Professional Dog Training in Hopkinton, MA</h1>
+        <h2>
+          Where every day is a <em>good doggy day</em>—<br />
+          personalized training at our fully fenced facility for happier, more
+          confident dogs.
+        </h2>
+        <a href="#contact" class="cta-button">Book a Training Session</a>
       </header>
 
       <!-- About Us section with white background and two columns -->
       <section id="about" class="section">
-        
-          <div class="about-grid">
-            <div class="about-img"> 
+        <div class="about-grid">
+          <div class="about-img">
             <img
               src="src/images/dog-trainer-hopkinton-ashland-upton-holliston.jpg"
               alt="Dog trainer serving Hopkinton, Ashland, Upton, Holliston, and surrounding areas."
             />
-            </div>
-            <div class="about-text">
-         <h2>About Em's Doggy Days</h2>
+          </div>
+          <div class="about-text">
+            <!-- this header is more SEO frienldy than just "About US" as people will search for dog training in those areas-->
+            <h2>
+              Looking for a professional dog trainer in Hopkinton, Ashland,
+              Milford, Holliston, or nearby towns?
+            </h2>
             <p>
-              Welcome to Em’s Doggy Days, where every dog can have a good day—even if they’ve had a few ruff moments! Located in Hopkinton, MA, we offer personalized, professional dog training at our fully fenced, on-site facility. No house calls, no chaos—just good old-fashioned doggy learning (and plenty of tail wags).
-
+              You’ve come to the right place! Welcome to Em’s Doggy Days, where
+              every dog can have a good day—even if they’ve had a few
+              <em>ruff</em> moments. We provide personalized, professional dog
+              training exclusively at our fully fenced, on-site facility in
+              Hopkinton, MA. No house calls, no chaos—just good old-fashioned
+              doggy learning (and plenty of tail wags).
             </p>
 
             <p>
-           We proudly serve dogs from Hopkinton and nearby towns, including Ashland, Holliston, Milford, Southborough, Upton, and Westborough.
+              We proudly serve dogs from Hopkinton and nearby towns like
+              Ashland, Holliston, Milford, Southborough, Upton, and Westborough.
             </p>
 
             <p>
-              At Em’s Doggy Days, we believe training should be fun, practical, and stress-free. Our goal is to turn those "bad doggy days" into proud stories of how your dog went from wild child to calm, confident companion.
+              At Em’s Doggy Days, we believe training should be fun, practical,
+              and stress-free. Our goal is to turn those
+              <em>“bad doggy days”</em> into proud stories of how your dog went
+              from wild child to calm, confident companion.
             </p>
 
             <p>
-           If you’re ready to make every day a “good doggy day,” check out our services and let’s get started! 🐾
+              If you’re ready to make every day a <em>“good doggy day”</em>,
+              check out our services and let’s get started! 🐾
             </p>
-
-          
           </div>
         </div>
       </section>
@@ -128,7 +170,7 @@
       <!-- Services & Pricing section with purple background -->
       <section id="services" class="section services-section">
         <div class="services-content">
-          <h2>Services & Pricing</h2>
+          <h2>Obedience, Behavioral, Puppy Training & More in Hopkinton, MA</h2>
           <p>
             At Em’s Doggy Days, all training takes place at our fully fenced,
             on-site facility in Hopkinton, MA. We focus on helping dogs and
@@ -177,31 +219,55 @@
 
           <p>
             If you’re ready to give your dog the tools they need for a lifetime
-            of success, <a href="#contact">contact us today</a> to learn more or
-            schedule your first session. We can't wait to meet you! 🐾
+            of success,
+            <a href="#contact">contact Em’s Doggy Days in Hopkinton</a> to learn
+            more or schedule your first session. We can't wait to meet you! 🐾
           </p>
+
+          <a href="#contact" class="cta-button">Book a Session Today</a>
         </div>
       </section>
 
       <!-- Meet Emily section with white background and two columns -->
       <section id="meet-emily" class="section">
-            
-              <div class="meet-grid">
-    <div class="meet-text">
-      <h2>Meet Emily</h2>
+        <div class="meet-grid">
+          <div class="meet-text">
+            <h2>
+              Meet Emily – Professional Dog Trainer Serving Hopkinton, Ashland,
+              Holliston & Beyond
+            </h2>
             <p>
-             Hi, I’m Emily Barclay Davis — and at Em’s Doggy Days, I’m passionate about helping dogs (and their people!) build better communication, confidence, and trust. With over 12 years of hands-on experience working with dogs of all breeds, I use positive, practical training to help every dog become their best self. When I’m not working with client dogs, you’ll usually find me training and competing in sport and scent work with my own high-energy Belgian Malinois!
+              Hi, I’m Emily Davis — founder of Em’s Doggy Days and a lifelong
+              dog lover with over 12 years of experience working with dogs in
+              Hopkinton and surrounding towns. My journey began in local doggy
+              daycares, where I gained hands-on experience caring for dogs of
+              all breeds, sizes, and personalities. Over time, I transitioned
+              into professional training roles at several area facilities,
+              developing a reputation for using practical, positive methods that
+              help dogs (and their humans!) build confidence and connection.
             </p>
 
             <p>
-         You may also meet my partner, John Tappan — a lifelong Hopkinton local and fellow dog enthusiast — who sometimes lends a helping hand with training sessions.
+              In 2025, I launched Em’s Doggy Days to bring personalized,
+              one-on-one training to the community I know and love. My goal is
+              to make training feel approachable, fun, and effective — whether
+              you’re raising a rambunctious puppy or working through behavioral
+              challenges with an adult dog.
             </p>
 
             <p>
-              If you’re ready to turn those "<span style="font-style: italic"
-                >bad doggy </span
-              >days" into "<span style="font-style: italic">good doggy </span
-              >days," I’d love to meet you and your best friend! 🐾
+              When I’m not training client dogs, I’m usually spending time with
+              my own high-energy Belgian Malinois, competing in scent work and
+              other dog sports. You may also meet my partner, John Tappan — a
+              lifelong Hopkinton local and fellow dog enthusiast — who often
+              helps out during sessions.
+            </p>
+
+            <p>
+              If you’re ready to turn those
+              <span style="font-style: italic">“bad doggy days”</span> into
+              <span style="font-style: italic">“good doggy days”</span>, I’d
+              love to meet you and your best friend! 🐾
             </p>
 
             <p class="signature">— Emily Davis</p>
@@ -209,132 +275,181 @@
           <div class="meet-image">
             <img
               src="src/images/emily-davis-dog-trainer-hopkinton.jpg"
-              alt="Emily Davis smiles with her dog during training in Hopkinton."
+              alt="Emily Davis professional dog trainer in Hopkinton working with a dog"
             />
           </div>
+        </div>
       </section>
 
-      
-  <!-- Instagram Embed Section -->
-<section id="instagram" class="section instagram-section">
-  <h3 class="section-title">Follow Emily on Instagram!</h3>
-  <div class="instagram-grid">
-    <!-- Post 1 -->
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CqOXbKqOmNl/" data-instgrm-version="14" style="background: #fff; border: 0; margin: 1px; padding: 0;"></blockquote>
+      <!-- Instagram Embed Section -->
+      <section id="instagram" class="section instagram-section">
+        <h3 class="section-title">Follow Emily on Instagram!</h3>
+        <div class="instagram-grid">
+          <!-- Post 1 -->
+          <blockquote
+            class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/CqOXbKqOmNl/"
+            data-instgrm-version="14"
+            style="background: #fff; border: 0; margin: 1px; padding: 0"
+          ></blockquote>
 
-  <!-- Post 2 -->
-    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DIeXkiGxltf/" data-instgrm-version="14" style="background: #fff; border: 0; margin: 1px; padding: 0;"></blockquote>
+          <!-- Post 2 -->
+          <blockquote
+            class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/reel/DIeXkiGxltf/"
+            data-instgrm-version="14"
+            style="background: #fff; border: 0; margin: 1px; padding: 0"
+          ></blockquote>
 
-  
-    <!-- Post 3 -->
-    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CtMkPqdO4P2/" data-instgrm-version="14" style="background: #fff; border: 0; margin: 1px; padding: 0;"></blockquote>
-  </div>
-</section>
+          <!-- Post 3 -->
+          <blockquote
+            class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/CtMkPqdO4P2/"
+            data-instgrm-version="14"
+            style="background: #fff; border: 0; margin: 1px; padding: 0"
+          ></blockquote>
+        </div>
+      </section>
 
-<!-- Embed Instagram JS -->
-<script async src="//www.instagram.com/embed.js"></script>
+      <!-- Embed Instagram JS -->
+      <script async src="//www.instagram.com/embed.js"></script>
 
+      <!-- Contact Section -->
+      <section id="contact" class="section">
+        <h2>Contact Em’s Doggy Days – Hopkinton, MA Dog Trainer</h2>
 
-<!-- Contact Section -->
-<section id="contact" class="section">
-  <h2>Contact Us</h2>
+        <div class="contact-grid">
+          <!-- Left column: Contact details -->
+          <div>
+            <h3>Em’s Doggy Days</h3>
+            <p>
+              <strong
+                >Please give us a call or send us an email to get
+                started!</strong
+              >
+            </p>
 
-  <div class="contact-grid">
-    <!-- Left column: Contact details -->
-    <div>
-      <h3>Em’s Doggy Days</h3>
-<p><strong>Please give us a call or send us an email to get started!</strong>
-    
-      <p><strong>Email:</strong> <a href="mailto:emsdoggydays@gmail.com">emsdoggydays@gmail.com</a></p>
-      <p><strong>Phone:</strong> <a href="tel:16176458318">(617) 645–8318</a></p>
-      <p><strong>Location:</strong> 11 Chamberlain St, Hopkinton, MA</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:emsdoggydays@gmail.com">emsdoggydays@gmail.com</a>
+            </p>
+            <p>
+              <strong>Phone:</strong>
+              <a href="tel:16176458318">(617) 645–8318</a>
+            </p>
+            <p><strong>Location:</strong> 11 Chamberlain St, Hopkinton, MA</p>
 
-      
-    
-    <p>If you'd like, you can fill out the form 
-  <span class="form-location desktop-only">on the right</span>
-  <span class="form-location mobile-only">below</span> 
-  and we'll get back to you soon.
-</p>
+            <p>
+              If you'd like, you can fill out the form
+              <span class="form-location desktop-only">on the right</span>
+              <span class="form-location mobile-only">below</span>
+              and we'll get back to you soon.
+            </p>
+          </div>
 
-    </div>
+          <!-- Right column: Contact form -->
+          <p id="form-message" style="display: none; color: green"></p>
 
+          <form action="#" method="POST">
+            <!-- Contact Info Row -->
+            <div class="form-row">
+              <label for="name" class="sr-only">Your Name</label>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
 
+              <label for="email" class="sr-only">Email</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
 
-    <!-- Right column: Contact form -->
-     <p id="form-message" style="display: none; color: green;"></p>
+              <label for="telephone" class="sr-only">Phone Number</label>
+              <input
+                id="telephone"
+                type="tel"
+                name="telephone"
+                placeholder="Phone Number"
+                pattern="^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$"
+                inputmode="tel"
+                required
+                title="Please enter a 10-digit phone number like 123-456-7890"
+              />
+            </div>
 
-<form action="#" method="POST">
-<!-- Contact Info Row -->
-<div class="form-row">
-  <input type="text" name="name" placeholder="Your Name" required>
+            <!-- Dog Info Row -->
+            <div class="form-row">
+              <label for="dog_name" class="sr-only">Dog's Name</label>
+              <input
+                id="dog_name"
+                type="text"
+                name="dog_name"
+                placeholder="Dog's Name"
+                required
+              />
 
-  <input type="email" name="email" placeholder="Your Email" required>
+              <label for="dog_age" class="sr-only">Dog's Age</label>
+              <input
+                id="dog_age"
+                type="text"
+                name="dog_age"
+                placeholder="Dog's Age"
+              />
 
+              <label for="breed" class="sr-only">Dog's Breed</label>
+              <input
+                id="breed"
+                type="text"
+                name="breed"
+                placeholder="Breed (if known)"
+              />
+            </div>
 
-<input 
-  type="tel" 
-  name="telephone" 
-  placeholder="Phone Number" 
-  pattern="[\d\s\-().]{7,}" 
-  inputmode="tel" 
-  required 
-  title="Please enter a valid phone number">
+            <fieldset class="contact-preference">
+              <legend>How would you prefer we contact you?</legend>
 
-</div>
+              <label>
+                <input
+                  type="radio"
+                  name="contact-preference"
+                  value="email"
+                  required
+                />
+                Email
+              </label>
+              <label>
+                <input type="radio" name="contact-preference" value="phone" />
+                Phone Call
+              </label>
+              <label>
+                <input type="radio" name="contact-preference" value="text" />
+                Text Message (rates may apply)
+              </label>
+            </fieldset>
 
-<!-- Dog Info Row -->
-<div class="form-row">
-  <input type="text" name="dog_name" placeholder="Dog's Name" required>
-  <input type="text" name="dog_age" placeholder="Dog's Age">
-  <input type="text" name="breed" placeholder="Breed (if known)">
-</div>
+            <button type="submit" style="margin-top: 10px">Submit</button>
+          </form>
+        </div>
 
-  <textarea
-    placeholder="Tell us a bit about your dog and how we can help with training..."
-    rows="4"
-    required
-    style="margin-top: 10px;"
-  ></textarea>
+        <!-- Spacer between form and map -->
+        <div style="height: 40px"></div>
 
-<p>How would you prefer we contact you?</p>
-<div class="contact-preference">
-  <label>
-    <input type="radio" name="contact-preference" value="email" required>
-    Email
-  </label>
-  <label>
-    <input type="radio" name="contact-preference" value="phone">
-    Phone Call
-  </label>
-  <label>
-    <input type="radio" name="contact-preference" value="text">
-    Text Message (rates may apply)
-  </label>
-</div>
-
-
-  <button type="submit" style="margin-top: 10px;">Submit</button>
-</form>
-
-  </div>
-
-  <!-- Spacer between form and map -->
-  <div style="height: 40px;"></div>
-
-  <!-- Embedded map -->
-  <div class="map-container">
-    <iframe
-      src="https://www.google.com/maps?q=Hopkinton,+MA&output=embed"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
-</section>
-
-
-</main>
-
+        <!-- Embedded map -->
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps?q=Hopkinton,+MA&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
 
       <!-- Footer -->
       <footer class="footer">
@@ -342,17 +457,19 @@
           <!-- left column -->
           <div class="footer-column">
             <div class="footer-business">
-              <p>© 2025 Em's Doggy Days</p>
+              <h3>© 2025 Em's Doggy Days</h3>
               <p>Hopkinton, MA | Licensed & Insured</p>
             </div>
 
             <div class="footer-contact">
               <span>Contact:</span>
               <a href="mailto:emsdoggydays@gmail.com">
-                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <span class="sr-only">Email us</span>
               </a>
               <a href="tel:16176458318">
-                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <span class="sr-only">Call us</span>
               </a>
             </div>
 
@@ -361,14 +478,18 @@
               <a
                 href="https://www.instagram.com/barclay_emily/"
                 target="_blank"
+                aria-label="Instagram profile"
               >
-                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                <span class="sr-only">Follow us on Instagram</span>
               </a>
               <a
                 href="https://www.facebook.com/emily.m.barclay.3"
                 target="_blank"
+                aria-label="Instagram profile"
               >
-                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                <span class="sr-only">Connect with us on Facebook</span>
               </a>
             </div>
           </div>
@@ -376,8 +497,8 @@
           <!-- right column -->
           <div class="footer-right">
             <img
-              src="src/images/logo-original.PNG"
-              alt="Em's Doggy Days logo with dogs"
+              src="src/images/dog-training-logo-hopkinton-ashland.png"
+              alt="Em's Doggy Days logo with dogs – professional dog training in Hopkinton, MA"
               class="footer-logo"
             />
             <p class="footer-credits">
@@ -396,13 +517,11 @@
         </section>
       </footer>
     </div>
-       <!-- scoll to top button -->
-     <button id="scrollToTopBtn" title="Go to top">
-  <i class="fa-solid fa-arrow-up"></i>
-</button>
+    <!-- scoll to top button -->
+    <button id="scrollToTopBtn" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <script src="src/js/scripts.js"></script>
-
- 
   </body>
 </html>

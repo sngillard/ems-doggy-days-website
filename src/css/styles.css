@@ -14,6 +14,36 @@ body {
   background: rgba(157, 130, 229, 0.6);
 }
 
+/* CTA BUTTON STYLES */
+.cta-button {
+  font-weight: 700;
+  font-size: 14px;
+  color: #5b42c2;
+  padding: 16px 32px;
+  margin-top: 32px;
+  display: inline-block;
+  margin: 0 auto;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: white;
+  text-decoration: none;
+  border: 2px solid #5b42c2;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #5b42c2;
+  color: white;
+}
+
+.cta-button {
+  padding: 12px 24px;
+  font-size: 13px;
+}
+
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
     url("../images/dog-training-hopkinton-ma-hero.jpg");
@@ -45,21 +75,6 @@ header h3 {
   text-transform: uppercase;
   letter-spacing: 5px;
   margin: 0;
-}
-
-header a {
-  font-weight: 700;
-  font-size: 14px;
-  color: #5b42c2;
-  padding: 16px 32px; /* 16 top and bottom, 32 sides */
-  margin-top: 32px;
-  display: inline-block; /* margin won't work on inline items, so make inline-block */
-  line-height: 1.5;
-  text-align: center;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  background: white;
-  text-decoration: none;
 }
 
 body {
@@ -169,6 +184,13 @@ h3 {
 #services {
   background-color: rgba(157, 130, 229, 0.15); /* light purple */
   color: black;
+}
+
+#services .cta-button {
+  display: block;
+  margin: 30px auto 0 auto;
+  text-align: center;
+  max-width: max-content;
 }
 
 #services ul {
@@ -296,6 +318,19 @@ form {
   font-weight: bold;
 }
 
+/* Hide contact form labels visually but keep on screen readers for accessibility standards */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /*  SHOW/HIDE FORM LOCATION BASED ON SCREEN SIZE */
 
 /* If you'd like, you can fill out the form ON THE RIGHT- large screen */
@@ -308,14 +343,15 @@ form {
   display: none;
 }
 
-@media (max-width: 900px) {
-  .desktop-only {
-    display: none;
-  }
+.mobile-only {
+  display: inline;
+}
 
-  .mobile-only {
-    display: inline;
-  }
+.cta-button {
+  display: inline-block;
+  margin: 30px auto 0 auto;
+  text-align: center;
+  max-width: max-content;
 }
 
 form input,
@@ -497,6 +533,17 @@ footer {
 @media (max-width: 900px) {
   header {
     padding: 100px 0;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .cta-button {
+    display: inline-block;
+    margin: 30px auto 0 auto;
+    text-align: center;
+    max-width: max-content;
   }
 
   section {
