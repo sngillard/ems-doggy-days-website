@@ -2,7 +2,8 @@
 /* SHARED STYLES */
 .container {
   max-width: 1400px;
-  margin: 0 auto; /* center */
+  margin: 0 auto;
+  /* center */
 }
 
 section {
@@ -48,7 +49,8 @@ header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
     url("../images/dog-training-hopkinton-ma-hero.jpg");
   background-repeat: no-repeat;
-  background-size: cover; /* fill screen */
+  background-size: cover;
+  /* fill screen */
   color: white;
   text-align: center;
   padding: 200px 0;
@@ -56,16 +58,16 @@ header {
 
 header h1 {
   font-weight: 700;
-  font-size: 96px;
+  font-size: 82px;
   line-height: 1;
-  margin: 30px 0;
+  margin: 50px 5px;
 }
 
 header h2 {
   font-weight: 400;
   font-size: 30px;
   line-height: 1.5;
-  margin: 0px 50px;
+  margin: 0px 60px;
 }
 
 header h3 {
@@ -106,7 +108,8 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(157, 130, 229, 0.6); /* #635589 logo purple */
+  background-color: rgba(157, 130, 229, 0.6);
+  /* #635589 logo purple */
   padding: 10px 20px;
   position: sticky;
   top: 0;
@@ -142,7 +145,8 @@ h3 {
 }
 
 .navbar ul li a:hover {
-  color: #5b42c2; /* color upon hover */
+  color: #5b42c2;
+  /* color upon hover */
   background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -182,7 +186,8 @@ h3 {
 
 /* SERVICES STYLES */
 #services {
-  background-color: rgba(157, 130, 229, 0.15); /* light purple */
+  background-color: rgba(157, 130, 229, 0.15);
+  /* light purple */
   color: black;
 }
 
@@ -269,14 +274,15 @@ h3 {
 
 /* INSTAGRAM */
 #instagram {
-  background-color: rgba(157, 130, 229, 0.07); /* soft lavender */
+  background-color: rgba(157, 130, 229, 0.07);
+  /* soft lavender */
   padding: 60px 20px;
-  text-align: center;
 }
 
 .instagram-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* responsive */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* responsive */
   gap: 20px;
   justify-items: center;
 }
@@ -284,6 +290,18 @@ h3 {
 .instagram-media {
   max-width: 100%;
   width: 100px;
+}
+
+.social-highlight {
+  color: #5b42c2;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.social-highlight:hover {
+  color: #47329b; /* Slightly darker purple on hover */
+  text-shadow: 0 0 6px rgba(91, 66, 194, 0.3);
 }
 
 /* CONTACT STYLES */
@@ -444,14 +462,18 @@ footer {
 }
 
 .footer-column p:first-child {
-  font-size: 20px; /* Business name */
+  font-size: 20px;
+  /* Business name */
   margin: 5px 0;
-  font-weight: 600; /* optional: bolder if you want */
+  font-weight: 600;
+  /* optional: bolder if you want */
 }
 
 .footer-column p:nth-child(2) {
-  font-size: 18px; /* Hopkinton, MA */
-  margin: 5px 0 20px 0; /* bottom margin of 20px after location */
+  font-size: 18px;
+  /* Hopkinton, MA */
+  margin: 5px 0 20px 0;
+  /* bottom margin of 20px after location */
 }
 
 .footer-contact,
@@ -512,7 +534,8 @@ footer {
   bottom: 20px;
   left: 20px;
   z-index: 1000;
-  background-color: rgba(91, 66, 194, 0.8); /* Match your site purple */
+  background-color: rgba(91, 66, 194, 0.8);
+  /* Match your site purple */
   color: white;
   border: none;
   border-radius: 50%;
@@ -520,7 +543,8 @@ footer {
   font-size: 24px;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  display: none; /* Hidden by default */
+  display: none;
+  /* Hidden by default */
   transition: background-color 0.3s ease;
 }
 
@@ -551,7 +575,7 @@ footer {
   }
 
   header h1 {
-    font-size: 48px;
+    font-size: 42px;
   }
 
   header h2 {
@@ -569,24 +593,29 @@ footer {
   /* @MEDIA- NAVBAR STYLES */
 
   .navbar {
-    flex-direction: column; /* stack logo and menu vertically if needed */
+    flex-direction: column;
+    /* stack logo and menu vertically if needed */
     align-items: center;
   }
 
   .navbar ul {
-    flex-direction: column; /* make links stack vertically */
-    gap: 10px; /* smaller gap for mobile */
+    flex-direction: column;
+    /* make links stack vertically */
+    gap: 10px;
+    /* smaller gap for mobile */
     margin-top: 10px;
   }
 
   .navbar ul li a {
-    font-size: 13px; /* slightly smaller text on mobile */
+    font-size: 13px;
+    /* slightly smaller text on mobile */
     padding: 4px 8px;
     color: black;
   }
 
   .logo img {
-    height: 50px; /* slightly smaller logo for mobile */
+    height: 50px;
+    /* slightly smaller logo for mobile */
     width: auto;
   }
 
@@ -609,7 +638,8 @@ footer {
   }
 
   .about-img {
-    max-width: 300px; /* smaller image on mobile */
+    max-width: 300px;
+    /* smaller image on mobile */
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -621,7 +651,8 @@ footer {
 
   .meet-grid {
     display: flex;
-    flex-direction: column; /* stack vertically */
+    flex-direction: column;
+    /* stack vertically */
     text-align: center;
   }
 
@@ -632,12 +663,14 @@ footer {
 
   /* TRICK: Flip order for About Us (show text first) */
   .about-grid {
-    flex-direction: column-reverse; /* put text BEFORE image */
+    flex-direction: column-reverse;
+    /* put text BEFORE image */
   }
 
   /* @MEDIA- INSTAGRAM SECTION */
   .instagram-grid {
-    grid-template-columns: 1fr; /* stack vertically on small screens */
+    grid-template-columns: 1fr;
+    /* stack vertically on small screens */
   }
 
   .instagram-media {
@@ -665,17 +698,20 @@ footer {
   }
 
   .footer-left p {
-    font-size: 15px; /* shrink business info on mobile */
+    font-size: 15px;
+    /* shrink business info on mobile */
   }
 
   .footer-contact span,
   .footer-social span {
-    font-size: 16px; /* also shrink "Contact:" and "Connect:" a little */
+    font-size: 16px;
+    /* also shrink "Contact:" and "Connect:" a little */
   }
 
   .footer-contact a i,
   .footer-social a i {
-    font-size: 28px; /* icons still big enough for finger tapping */
+    font-size: 28px;
+    /* icons still big enough for finger tapping */
   }
 
   .footer-contact,
