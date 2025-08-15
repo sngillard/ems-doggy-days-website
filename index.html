@@ -341,7 +341,7 @@
       </section>
 
       <!-- Embed Instagram JS -->
-      <script async src="//www.instagram.com/embed.js"></script>
+      <script async src="https://www.instagram.com/embed.js"></script>
 
       <!-- Contact Section -->
       <section id="contact" class="section">
@@ -379,7 +379,24 @@
           <!-- Right column: Contact form -->
           <p id="form-message" style="display: none; color: green"></p>
 
-          <form action="#" method="POST">
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/success.html"
+          >
+            <!-- Netlify form tracking -->
+            <input type="hidden" name="form-name" value="contact" />
+
+            <!-- Honeypot for spam prevention -->
+            <p class="sr-only">
+              <label
+                >Don’t fill this out if you’re human:
+                <input name="bot-field" />
+              </label>
+            </p>
+
             <!-- Contact Info Row -->
             <div class="form-row">
               <label for="name" class="sr-only">Your Name</label>
@@ -443,7 +460,6 @@
 
             <fieldset class="contact-preference">
               <legend>How would you prefer we contact you?</legend>
-
               <label>
                 <input
                   type="radio"
@@ -466,19 +482,19 @@
             <button type="submit" style="margin-top: 10px">Submit</button>
           </form>
         </div>
-
-        <!-- Spacer between form and map -->
-        <div style="height: 40px"></div>
-
-        <!-- Embedded map -->
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps?q=Hopkinton,+MA&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
       </section>
+
+      <!-- Spacer between form and map -->
+      <div style="height: 40px"></div>
+
+      <!-- Embedded map -->
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps?q=Hopkinton,+MA&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
 
       <!-- Footer -->
       <footer class="footer">
