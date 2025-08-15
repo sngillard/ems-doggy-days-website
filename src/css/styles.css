@@ -361,10 +361,6 @@ form {
   display: none;
 }
 
-.mobile-only {
-  display: inline;
-}
-
 .cta-button {
   display: inline-block;
   margin: 30px auto 0 auto;
@@ -414,6 +410,31 @@ form button:hover {
   font-size: 16px;
 }
 
+/* Review CTA: center + remove blue underline */
+.review-cta {
+  margin-top: 16px;
+  text-align: center;
+  line-height: 1.6;
+  /* span both columns when the grid has 2 cols */
+  grid-column: 1 / -1;
+}
+
+.review-link {
+  text-decoration: none; /* no default blue underline */
+  color: #5b42c2; /* match your brand purple */
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+}
+.review-link:hover,
+.review-link:focus {
+  border-bottom-color: currentColor; /* subtle underline on hover */
+}
+
+/* Make the stars line up nicely */
+.review-cta [aria-hidden="true"] {
+  margin: 0 6px;
+}
+
 /* MAP EMBED */
 .map-container {
   width: 100%;
@@ -454,7 +475,7 @@ footer {
   font-size: 18px;
 }
 
-/* divider between */
+/* Divider between business info and contact/social */
 .footer-business {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding-bottom: 20px;
@@ -463,17 +484,13 @@ footer {
 
 .footer-column p:first-child {
   font-size: 20px;
-  /* Business name */
   margin: 5px 0;
   font-weight: 600;
-  /* optional: bolder if you want */
 }
 
 .footer-column p:nth-child(2) {
   font-size: 18px;
-  /* Hopkinton, MA */
   margin: 5px 0 20px 0;
-  /* bottom margin of 20px after location */
 }
 
 .footer-contact,
@@ -513,6 +530,7 @@ footer {
   opacity: 0.8;
 }
 
+/* Footer credits (Logo by / Website by) */
 .footer-credits {
   font-size: 11px;
   margin-top: 15px;
@@ -526,6 +544,24 @@ footer {
 
 .footer-credits a:hover {
   color: #5b42c2;
+  text-decoration: underline; /* Keep underline for credits */
+}
+
+/* Google Review section */
+.footer-review {
+  margin-top: 15px;
+}
+
+.footer-review .review-link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Make review link purple on hover without underline */
+.footer-review a.review-link:hover {
+  color: #5b42c2;
+  text-decoration: none !important;
 }
 
 /* Scroll to Top Button */
@@ -561,6 +597,10 @@ footer {
 
   .desktop-only {
     display: none;
+  }
+
+  .mobile-only {
+    display: inline;
   }
 
   .cta-button {
