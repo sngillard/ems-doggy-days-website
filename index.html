@@ -394,13 +394,12 @@
             </p>
           </div>
 
-          <!-- Netlify detection fix for form submissions -->
+          <!-- Right column: Contact form (Netlify) -->
           <form
             name="contact"
             method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"
-            action="/success.html"
           >
             <!-- Netlify form tracking -->
             <input type="hidden" name="form-name" value="contact" />
@@ -439,10 +438,8 @@
                 type="tel"
                 name="telephone"
                 placeholder="Phone Number"
-                pattern="^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$"
                 inputmode="tel"
                 required
-                title="Please enter a 10-digit phone number like 123-456-7890"
               />
             </div>
 
@@ -497,20 +494,20 @@
 
             <button type="submit" style="margin-top: 10px">Submit</button>
           </form>
-
-          <p class="review-cta">
-            <span aria-hidden="true">⭐</span>
-            Loved working with us?
-            <a
-              class="review-link"
-              href="https://share.google/jpkpkFzF03VcXMId4"
-              target="_blank"
-              rel="noopener"
-              >Please leave a review on Google</a
-            >
-            <span aria-hidden="true">⭐</span>
-          </p>
         </div>
+
+        <p class="review-cta">
+          <span aria-hidden="true">⭐</span>
+          Loved working with us?
+          <a
+            class="review-link"
+            href="https://share.google/jpkpkFzF03VcXMId4"
+            target="_blank"
+            rel="noopener"
+            >Please leave a review on Google</a
+          >
+          <span aria-hidden="true">⭐</span>
+        </p>
       </section>
 
       <!-- Spacer between form and map -->
