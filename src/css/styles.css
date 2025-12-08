@@ -279,6 +279,38 @@ h3 {
   padding: 60px 20px;
 }
 
+/* New for IG mobile & desktop differences to improve mobile loading speed */
+
+/* DESKTOP vs MOBILE INSTAGRAM VISIBILITY */
+.instagram-desktop {
+  display: block;
+}
+
+.instagram-mobile {
+  display: none;
+}
+
+/* On small screens: hide embeds, show simple image */
+@media (max-width: 768px) {
+  .instagram-desktop {
+    display: none;
+  }
+
+  .instagram-mobile {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .instagram-preview-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+}
+
+/* End of new IG */
+
 .instagram-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
