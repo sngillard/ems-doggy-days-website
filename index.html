@@ -394,9 +394,7 @@
             </p>
           </div>
 
-          <!-- Right column: Contact form -->
-          <p id="form-message" style="display: none; color: green"></p>
-
+          <!-- Netlify detection fix for form submissions -->
           <form
             name="contact"
             method="POST"
@@ -409,8 +407,8 @@
 
             <!-- Honeypot for spam prevention -->
             <p class="sr-only">
-              <label
-                >Don’t fill this out if you’re human:
+              <label>
+                Don’t fill this out if you’re human:
                 <input name="bot-field" />
               </label>
             </p>
@@ -499,6 +497,7 @@
 
             <button type="submit" style="margin-top: 10px">Submit</button>
           </form>
+
           <p class="review-cta">
             <span aria-hidden="true">⭐</span>
             Loved working with us?
