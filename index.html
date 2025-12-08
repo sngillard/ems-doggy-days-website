@@ -351,8 +351,15 @@
         </div>
       </section>
 
-      <!-- Embed Instagram JS -->
-      <script async src="https://www.instagram.com/embed.js"></script>
+      <!-- Instagram embed script — load ONLY on desktop -->
+      <script>
+        if (window.matchMedia("(min-width: 769px)").matches) {
+          var s = document.createElement("script");
+          s.async = true;
+          s.src = "https://www.instagram.com/embed.js";
+          document.body.appendChild(s);
+        }
+      </script>
 
       <!-- Contact Section -->
       <section id="contact" class="section">
@@ -601,6 +608,16 @@
     <button id="scrollToTopBtn" title="Go to top">
       <i class="fa-solid fa-arrow-up"></i>
     </button>
+
+    <!-- Instagram embed script — load ONLY on desktop -->
+    <script>
+      if (window.matchMedia("(min-width: 769px)").matches) {
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.instagram.com/embed.js";
+        document.body.appendChild(s);
+      }
+    </script>
 
     <script src="src/js/scripts.js"></script>
   </body>
