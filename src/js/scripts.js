@@ -1,17 +1,4 @@
-console.log("✅ scripts.js loaded");
-
-window.showToastTest = () => {
-  const toast = document.getElementById("toast");
-  const toastText = document.getElementById("toast-text");
-  if (!toast || !toastText) return console.log("❌ toast elements not found");
-  toastText.textContent = "Toast test works!";
-  toast.classList.add("is-visible");
-  toast.setAttribute("aria-hidden", "false");
-};
-
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("✅ scripts.js loaded");
-
   // Fade in each section when it scrolls into view
   const sections = document.querySelectorAll(".section");
 
@@ -20,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          obs.unobserve(entry.target);
+          obs.unobserve(entry.target); // Fade in once
         }
       });
     },
@@ -46,12 +33,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const toastText = document.getElementById("toast-text");
   const toastClose = document.querySelector(".toast-close");
 
-  console.log("toast element:", toast);
-
   let toastTimer;
 
-  function showToast(text, autoHideMs = 4500) {
+  // type = "success" | "error"
+  function showToast(text, autoHideMs = 4500, type = "success") {
     if (!toast || !toastText) return;
+
+    // reset + apply status styling
+    toast.classList.remove("success", "error");
+    toast.classList.add(type);
 
     toastText.textContent = text;
     toast.classList.add("is-visible");
@@ -63,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function hideToast() {
     if (!toast) return;
+
     toast.classList.remove("is-visible");
     toast.setAttribute("aria-hidden", "true");
   }
@@ -75,11 +66,16 @@ document.addEventListener("DOMContentLoaded", () => {
   if (form) {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      showToast("Submitting…", 1500);
+
+      showToast("Submitting…", 1500, "success");
 
       try {
         const formData = new FormData(form);
-        formData.append("form-name", "contact");
+
+        // Ensure Netlify receives the correct form name
+        if (!formData.has("form-name")) {
+          formData.append("form-name", "contact");
+        }
 
         const response = await fetch("/", {
           method: "POST",
@@ -88,25 +84,21 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (response.ok) {
-          showToast("Thank you! We’ll be in touch soon.");
+          showToast("Thank you! We’ll be in touch soon.", 10000, "success"); // 10 seconds
           form.reset();
         } else {
           showToast(
             "Sorry — something went wrong. Please call or email us instead.",
-            6500
-          );
-          console.error(
-            "Form POST failed:",
-            response.status,
-            response.statusText
+            10000,
+            "error"
           );
         }
       } catch (err) {
         showToast(
           "Sorry — something went wrong. Please try again or contact us directly.",
-          6500
+          10000,
+          "error"
         );
-        console.error("Form submit error:", err);
       }
     });
   }
