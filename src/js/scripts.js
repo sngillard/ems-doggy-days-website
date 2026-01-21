@@ -22,30 +22,70 @@ sections.forEach((section) => {
 // Show or hide the scroll button
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-window.addEventListener("scroll", function () {
-  if (window.scrollY > 300) {
-    // Show after scrolling down 300px
-    scrollToTopBtn.style.display = "block";
-  } else {
-    scrollToTopBtn.style.display = "none";
-  }
-});
-
-// Scroll to top when clicked
-scrollToTopBtn.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
+if (scrollToTopBtn) {
+  window.addEventListener("scroll", function () {
+    scrollToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
   });
-});
 
-// Submit form, save submission, redirect to success page
-document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  // Show success message
-  const message = document.getElementById("form-message");
-  message.textContent = "Thank you! We’ll be in touch soon.";
-  message.style.display = "block";
-  // Optionally clear the form
-  this.reset();
-});
+  // Scroll to top when clicked
+  scrollToTopBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+const form = document.querySelector('form[name="contact"]');
+const message = document.getElementById("form-message");
+
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    if (message) {
+      message.textContent = "Submitting…";
+      message.style.display = "block";
+    }
+
+    // If the message element isn't on the page, don't crash.
+    if (message) {
+      message.style.display = "none";
+      message.textContent = "";
+    }
+
+    try {
+      const formData = new FormData(form);
+      formData.append("form-name", "contact");
+
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      if (response.ok) {
+        if (message) {
+          message.textContent = "Thank you! We’ll be in touch soon.";
+          message.style.display = "block";
+        }
+        form.reset();
+      } else {
+        if (message) {
+          message.textContent =
+            "Sorry — something went wrong. Please call or email us instead.";
+          message.style.display = "block";
+        }
+        console.error(
+          "Form POST failed:",
+          response.status,
+          response.statusText
+        );
+      }
+    } catch (err) {
+      if (message) {
+        message.textContent =
+          "Sorry — something went wrong. Please try again or contact us directly.";
+        message.style.display = "block";
+      }
+      console.error("Form submit error:", err);
+    }
+  });
+}
