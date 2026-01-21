@@ -39,16 +39,13 @@ scrollToTopBtn.addEventListener("click", function () {
   });
 });
 
+// Submit form, save submission, redirect to success page
 document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault(); // prevent actual submission
-
-  // Optional: validate or collect data here if needed
-
+  e.preventDefault();
   // Show success message
   const message = document.getElementById("form-message");
   message.textContent = "Thank you! We’ll be in touch soon.";
   message.style.display = "block";
-
   // Optionally clear the form
   this.reset();
 });
