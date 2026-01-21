@@ -1,3 +1,14 @@
+console.log("✅ scripts.js loaded");
+
+window.showToastTest = () => {
+  const toast = document.getElementById("toast");
+  const toastText = document.getElementById("toast-text");
+  if (!toast || !toastText) return console.log("❌ toast elements not found");
+  toastText.textContent = "Toast test works!";
+  toast.classList.add("is-visible");
+  toast.setAttribute("aria-hidden", "false");
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   console.log("✅ scripts.js loaded");
 
