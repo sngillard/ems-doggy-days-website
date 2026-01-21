@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (response.ok) {
-          showToast("Thank you! We’ll be in touch soon.", 10000, "success"); // 10 seconds
+          showToast("Thank you! We’ll be in touch soon.", 20000, "success"); // 10 seconds
           form.reset();
         } else {
           showToast(
