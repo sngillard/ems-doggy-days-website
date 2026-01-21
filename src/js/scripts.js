@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } catch (err) {
         showToast(
           "Sorry — something went wrong. Please try again or contact us directly.",
-          10000,
+          20000,
           "error"
         );
       }
