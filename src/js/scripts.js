@@ -10,46 +10,60 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  {
-    threshold: 0.1,
-  }
+  { threshold: 0.1 }
 );
 
-sections.forEach((section) => {
-  observer.observe(section);
-});
+sections.forEach((section) => observer.observe(section));
 
-// Show or hide the scroll button
+// Scroll-to-top button (guarded)
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
 if (scrollToTopBtn) {
-  window.addEventListener("scroll", function () {
+  window.addEventListener("scroll", () => {
     scrollToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
   });
 
-  // Scroll to top when clicked
-  scrollToTopBtn.addEventListener("click", function () {
+  scrollToTopBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
 
+// ---- Toast helpers ----
+const toast = document.getElementById("toast");
+const toastText = document.getElementById("toast-text");
+const toastClose = document.querySelector(".toast-close");
+
+let toastTimer;
+
+function showToast(text, autoHideMs = 4500) {
+  if (!toast || !toastText) return;
+
+  toastText.textContent = text;
+  toast.classList.add("is-visible");
+  toast.setAttribute("aria-hidden", "false");
+
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(hideToast, autoHideMs);
+}
+
+function hideToast() {
+  if (!toast) return;
+  toast.classList.remove("is-visible");
+  toast.setAttribute("aria-hidden", "true");
+}
+
+if (toastClose) {
+  toastClose.addEventListener("click", hideToast);
+}
+
+// ---- Netlify form submit (AJAX) ----
 const form = document.querySelector('form[name="contact"]');
-const message = document.getElementById("form-message");
 
 if (form) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    if (message) {
-      message.textContent = "Submitting…";
-      message.style.display = "block";
-    }
-
-    // If the message element isn't on the page, don't crash.
-    if (message) {
-      message.style.display = "none";
-      message.textContent = "";
-    }
+    showToast("Submitting…", 1500);
 
     try {
       const formData = new FormData(form);
@@ -62,17 +76,13 @@ if (form) {
       });
 
       if (response.ok) {
-        if (message) {
-          message.textContent = "Thank you! We’ll be in touch soon.";
-          message.style.display = "block";
-        }
+        showToast("Thank you! We’ll be in touch soon.");
         form.reset();
       } else {
-        if (message) {
-          message.textContent =
-            "Sorry — something went wrong. Please call or email us instead.";
-          message.style.display = "block";
-        }
+        showToast(
+          "Sorry — something went wrong. Please call or email us instead.",
+          6500
+        );
         console.error(
           "Form POST failed:",
           response.status,
@@ -80,11 +90,10 @@ if (form) {
         );
       }
     } catch (err) {
-      if (message) {
-        message.textContent =
-          "Sorry — something went wrong. Please try again or contact us directly.";
-        message.style.display = "block";
-      }
+      showToast(
+        "Sorry — something went wrong. Please try again or contact us directly.",
+        6500
+      );
       console.error("Form submit error:", err);
     }
   });
