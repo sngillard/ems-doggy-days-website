@@ -39,12 +39,10 @@ Built with HTML, CSS, and JavsScript. Hosted on Netlify.
 ## Contact
 
 Website built by Sarah Gillard for Em's Doggy Days.
-For more information, visit [https://www.emsdoggydays.com] (httos://www.emsdoggydays.com).
+For more information, visit [Em's Doggy Days](https://www.emsdoggydays.com)
 
 ## Credits
 
-**Logo Design:** Lady Slipper
-//Add contact links, name, etc. as wanted
+**Logo Design:** [Lady Slipper Designs](https://www.ladyslipperdesigns.us/)
 
-**Website Development:** Sarah Gillard
-[GitHub](https://github.com/sngillard) | [LinkedIn](https://www.linkedin.com/in/sarahgillard3)
+**Website Development:** [Sarah Gillard](https://www.linkedin.com/in/sarahgillard3)
