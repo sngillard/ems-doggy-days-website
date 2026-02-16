@@ -3,7 +3,10 @@
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  /* center */
+}
+
+main.container {
+  display: block;
 }
 
 section {
@@ -32,7 +35,9 @@ body {
   text-decoration: none;
   border: 2px solid #5b42c2;
   border-radius: 6px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .cta-button:hover {
@@ -40,13 +45,9 @@ body {
   color: white;
 }
 
-.cta-button {
-  padding: 12px 24px;
-  font-size: 13px;
-}
-
-header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+.hero {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
     url("../images/dog-training-hopkinton-ma-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -56,21 +57,21 @@ header {
   padding: 200px 0;
 }
 
-header h1 {
+.hero h1 {
   font-weight: 700;
   font-size: 82px;
   line-height: 1;
   margin: 50px 5px;
 }
 
-header h2 {
+.hero h2 {
   font-weight: 400;
   font-size: 30px;
   line-height: 1.5;
   margin: 0px 60px;
 }
 
-header h3 {
+.hero h3 {
   font-weight: 900;
   font-size: 24px;
   line-height: 1.5;
@@ -80,8 +81,18 @@ header h3 {
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
 html {
@@ -95,7 +106,8 @@ h3 {
 }
 
 .signature {
-  font-family: "Brush Script MT", cursive, "Segoe Script", "Lucida Handwriting",
+  font-family:
+    "Brush Script MT", cursive, "Segoe Script", "Lucida Handwriting",
     "Comic Sans MS", cursive;
   font-style: italic;
   font-size: 28px;
@@ -140,7 +152,9 @@ h3 {
   font-size: 18px;
   font-weight: 500;
   padding: 8px 12px;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
   border-radius: 6px;
 }
 
@@ -154,7 +168,9 @@ h3 {
 .section {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
 }
 
 /* When section is visible */
@@ -393,13 +409,6 @@ form {
   display: none;
 }
 
-.cta-button {
-  display: inline-block;
-  margin: 30px auto 0 auto;
-  text-align: center;
-  max-width: max-content;
-}
-
 form input,
 form textarea,
 form button {
@@ -417,7 +426,13 @@ form button {
 }
 
 form button:hover {
-  background-color: #47329b;
+  background-color: white;
+  color: #5b42c2;
+  border: 2px solid #5b42c2;
+  border-radius: 6px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* Arrange inputs in two columns when enough space */
@@ -545,7 +560,10 @@ footer {
 .footer-social a i {
   font-size: 32px;
   color: white;
-  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease,
+    text-shadow 0.3s ease;
 }
 
 .footer-contact a i:hover,
@@ -623,7 +641,7 @@ footer {
 /* RESPONSIVE styles for smaller screens */
 /* @MEDIA- SHARED STYLES */
 @media (max-width: 900px) {
-  header {
+  .hero {
     padding: 100px 0;
   }
 
@@ -646,15 +664,15 @@ footer {
     scroll-margin-top: 30px;
   }
 
-  header h1 {
+  .hero h1 {
     font-size: 42px;
   }
 
-  header h2 {
+  .hero h2 {
     font-size: 20px;
   }
 
-  header h3 {
+  .hero h3 {
     font-size: 12px;
   }
 
@@ -815,7 +833,9 @@ footer {
   transform: translateX(-50%) translateY(-10px);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 250ms ease, transform 250ms ease;
+  transition:
+    opacity 250ms ease,
+    transform 250ms ease;
 
   background-color: #5b42c2; /* brand purple */
   color: white;
@@ -853,7 +873,9 @@ footer {
   font-size: 20px;
   cursor: pointer;
   padding: 0 6px;
-  transition: background 150ms ease, transform 150ms ease;
+  transition:
+    background 150ms ease,
+    transform 150ms ease;
 }
 
 .toast-close:hover {

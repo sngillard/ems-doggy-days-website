@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.1 },
   );
 
   sections.forEach((section) => observer.observe(section));
@@ -90,16 +90,18 @@ document.addEventListener("DOMContentLoaded", () => {
           showToast(
             "Sorry — something went wrong. Please call or email us instead.",
             10000,
-            "error"
+            "error",
           );
         }
       } catch (err) {
         showToast(
           "Sorry — something went wrong. Please try again or contact us directly.",
           20000,
-          "error"
+          "error",
         );
       }
     });
   }
 });
+
+document.getElementById("year").textContent = new Date().getFullYear();
