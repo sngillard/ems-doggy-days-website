@@ -48,7 +48,7 @@ body {
 .hero {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
-    url("../images/dog-training-hopkinton-ma-hero.jpg");
+    url("../images/dog-training-hopkinton-ma-hero.webp");
   background-repeat: no-repeat;
   background-size: cover;
   /* fill screen */
